@@ -1,3 +1,6 @@
 [submodule "profiling-recipe"]
 	path = profiling-recipe
 	url = https://github.com/niranjchandrasekaran/profiling-recipe.git
+[submodule "2015_Bray_GigaScience"]
+	path = 2015_Bray_GigaScience
+	url = git@github.com:broadinstitute/2015_Bray_GigaScience.git
