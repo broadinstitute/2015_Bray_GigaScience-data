@@ -1,0 +1,4 @@
+[core]
+    remote = s3storage
+['remote "s3storage"']
+    url = s3://cellpainting-gallery/cpg0012-wawer-bioactivecompoundprofiling/broad/workspace/software/2015_Bray_GigaScience-data_DVC
