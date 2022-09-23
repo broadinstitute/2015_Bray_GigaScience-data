@@ -20,8 +20,8 @@ annotate:
   well_column: Metadata_Well
   external :
     perform: true
-    file: <metadata file name>
-    merge_column: <Column to merge on>
+    file: cdrp_compounds.tsv
+    merge_column: broad_sample
 normalize:
   perform: true
   method: mad_robustize
@@ -37,7 +37,7 @@ normalize_negcon:
 feature_select:
   perform: true
   features: infer
-  level: batch
+  level: all
   gct: false
   image_features: true
   operations:
@@ -48,7 +48,7 @@ feature_select:
 feature_select_negcon:
   perform: true
   features: infer
-  level: batch
+  level: all
   gct: false
   image_features: true
   operations:
@@ -71,814 +71,814 @@ options:
 ---
 batch: CDRP
 plates:
-  - name: <FIRST PLATE NAME>
+  - name: 24277
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24278
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24279
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24280
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24293
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24294
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24295
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24296
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24297
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24300
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24301
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24302
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24303
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24304
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24305
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24306
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24307
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24308
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24309
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24310
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24311
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24312
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24313
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24319
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24320
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24321
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24352
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24357
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24507
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24508
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24509
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24512
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24514
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24515
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24516
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24517
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24518
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24523
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24525
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24560
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24562
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24563
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24564
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24565
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24566
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24583
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24584
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24585
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24586
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24588
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24590
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24591
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24592
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24593
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24594
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24595
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24596
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24602
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24604
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24605
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24609
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24611
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24617
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24618
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24619
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24623
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24624
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24625
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24631
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24633
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24634
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24635
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24636
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24637
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24638
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24639
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24640
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24641
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24642
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24643
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24644
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24645
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24646
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24647
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24648
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24651
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24652
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24653
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24654
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24655
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24656
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24657
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24661
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24663
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24664
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24666
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24667
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24683
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24684
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24685
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24687
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24688
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24726
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24731
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24732
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24733
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24734
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24735
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24736
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24739
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24740
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24750
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24751
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24752
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24753
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24754
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24755
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24756
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24758
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24759
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24772
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24773
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24774
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24775
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24783
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24785
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24789
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24792
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24793
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24795
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 24796
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 24797
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25372
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25374
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25376
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25378
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25380
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25382
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25387
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25391
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25392
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25403
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25406
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25408
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25410
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25414
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25416
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25418
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25420
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25422
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25424
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25426
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25428
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25430
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25432
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25434
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25435
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25436
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25438
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25485
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25488
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25490
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25492
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25503
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25553
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25564
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25565
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25566
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25567
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25569
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25570
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25571
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25572
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25573
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25575
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25576
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25578
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25579
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25580
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25581
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25583
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25584
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25585
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25587
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25588
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25590
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25591
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25592
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25593
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25594
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25598
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25599
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25605
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25638
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25639
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25641
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25642
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25643
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25663
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25664
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25665
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25667
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25674
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25675
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25676
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25677
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25678
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25679
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25680
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25681
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25683
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25686
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25688
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25689
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25690
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25692
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25694
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25695
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25700
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25704
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25707
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25708
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25724
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25725
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25726
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25732
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25738
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25739
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25740
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25741
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25742
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25847
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25848
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25849
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25852
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25853
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25854
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25855
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25856
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25857
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25858
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25859
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25862
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25885
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25890
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25891
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25892
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25903
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25904
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25908
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25909
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25911
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25912
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25913
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25914
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25915
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25918
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25923
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25925
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25929
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25931
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25935
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25937
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25938
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25939
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25943
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25944
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25945
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25949
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25955
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25962
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25965
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25966
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25967
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25968
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25983
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25984
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25985
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25986
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25987
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25988
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25989
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25990
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25991
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25992
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25993
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 25994
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 25997
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26002
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26006
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26007
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26008
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26009
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26058
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26060
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26061
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26071
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26081
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26092
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26107
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26110
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26115
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26118
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26124
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26126
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26128
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26133
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26135
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26138
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26140
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26159
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26166
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26174
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26181
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26202
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26203
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26204
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26205
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26207
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26216
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26224
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26232
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26239
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26247
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26271
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26521
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26531
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26542
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26544
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26545
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26562
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26563
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26564
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26569
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26572
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26574
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26575
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26576
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26577
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26578
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26579
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26580
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26588
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26592
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26595
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26596
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26598
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26600
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26601
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26607
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26608
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26611
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26612
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26622
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26623
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26625
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26626
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26640
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26641
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26642
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26643
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26644
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26662
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26663
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26664
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26666
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26668
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26669
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26670
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26671
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26672
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26673
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26674
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26675
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26677
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26678
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26679
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26680
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26681
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26682
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26683
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26684
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26685
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26688
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26695
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26702
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26703
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26705
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26724
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26730
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26739
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26744
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26745
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26748
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26752
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26753
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26765
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26767
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26768
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26771
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26772
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26785
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26786
     process: true
-  - name: <SECOND PLATE NAME>
+  - name: 26794
     process: true
-  - name: <FIRST PLATE NAME>
+  - name: 26795
     process: true
 process: true
