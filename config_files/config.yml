@@ -1,0 +1,884 @@
+---
+pipeline: Bray Gigascience all plates
+output_dir: profiles
+platemap_well_column: Metadata_well_position
+compartments:
+  - cells
+  - cytoplasm
+  - nuclei
+aggregate:
+  perform: false
+  plate_column: Metadata_Plate
+  well_column: Metadata_Well
+  method: median
+  fields: all
+  image_feature_categories:
+    - Count
+    - Intensity
+annotate:
+  perform: true
+  well_column: Metadata_Well
+  external :
+    perform: true
+    file: cdrp_compounds.tsv
+    merge_column: broad_sample
+normalize:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: true
+normalize_negcon:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: true
+feature_select:
+  perform: true
+  features: infer
+  level: all
+  gct: false
+  image_features: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+feature_select_negcon:
+  perform: true
+  features: infer
+  level: all
+  gct: false
+  image_features: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+quality_control:
+  perform: true
+  summary:
+    perform: true
+    row: Metadata_Row
+    column: Metadata_Col
+  heatmap:
+    perform : true
+options:
+  compression: gzip
+  float_format: "%.5g"
+  samples: all
+---
+batch: CDRP
+plates:
+  - name: 24277
+    process: true
+  - name: 24278
+    process: true
+  - name: 24279
+    process: true
+  - name: 24280
+    process: true
+  - name: 24293
+    process: true
+  - name: 24294
+    process: true
+  - name: 24295
+    process: true
+  - name: 24296
+    process: true
+  - name: 24297
+    process: true
+  - name: 24300
+    process: true
+  - name: 24301
+    process: true
+  - name: 24302
+    process: true
+  - name: 24303
+    process: true
+  - name: 24304
+    process: true
+  - name: 24305
+    process: true
+  - name: 24306
+    process: true
+  - name: 24307
+    process: true
+  - name: 24308
+    process: true
+  - name: 24309
+    process: true
+  - name: 24310
+    process: true
+  - name: 24311
+    process: true
+  - name: 24312
+    process: true
+  - name: 24313
+    process: true
+  - name: 24319
+    process: true
+  - name: 24320
+    process: true
+  - name: 24321
+    process: true
+  - name: 24352
+    process: true
+  - name: 24357
+    process: true
+  - name: 24507
+    process: true
+  - name: 24508
+    process: true
+  - name: 24509
+    process: true
+  - name: 24512
+    process: true
+  - name: 24514
+    process: true
+  - name: 24515
+    process: true
+  - name: 24516
+    process: true
+  - name: 24517
+    process: true
+  - name: 24518
+    process: true
+  - name: 24523
+    process: true
+  - name: 24525
+    process: true
+  - name: 24560
+    process: true
+  - name: 24562
+    process: true
+  - name: 24563
+    process: true
+  - name: 24564
+    process: true
+  - name: 24565
+    process: true
+  - name: 24566
+    process: true
+  - name: 24583
+    process: true
+  - name: 24584
+    process: true
+  - name: 24585
+    process: true
+  - name: 24586
+    process: true
+  - name: 24588
+    process: true
+  - name: 24590
+    process: true
+  - name: 24591
+    process: true
+  - name: 24592
+    process: true
+  - name: 24593
+    process: true
+  - name: 24594
+    process: true
+  - name: 24595
+    process: true
+  - name: 24596
+    process: true
+  - name: 24602
+    process: true
+  - name: 24604
+    process: true
+  - name: 24605
+    process: true
+  - name: 24609
+    process: true
+  - name: 24611
+    process: true
+  - name: 24617
+    process: true
+  - name: 24618
+    process: true
+  - name: 24619
+    process: true
+  - name: 24623
+    process: true
+  - name: 24624
+    process: true
+  - name: 24625
+    process: true
+  - name: 24631
+    process: true
+  - name: 24633
+    process: true
+  - name: 24634
+    process: true
+  - name: 24635
+    process: true
+  - name: 24636
+    process: true
+  - name: 24637
+    process: true
+  - name: 24638
+    process: true
+  - name: 24639
+    process: true
+  - name: 24640
+    process: true
+  - name: 24641
+    process: true
+  - name: 24642
+    process: true
+  - name: 24643
+    process: true
+  - name: 24644
+    process: true
+  - name: 24645
+    process: true
+  - name: 24646
+    process: true
+  - name: 24647
+    process: true
+  - name: 24648
+    process: true
+  - name: 24651
+    process: true
+  - name: 24652
+    process: true
+  - name: 24653
+    process: true
+  - name: 24654
+    process: true
+  - name: 24655
+    process: true
+  - name: 24656
+    process: true
+  - name: 24657
+    process: true
+  - name: 24661
+    process: true
+  - name: 24663
+    process: true
+  - name: 24664
+    process: true
+  - name: 24666
+    process: true
+  - name: 24667
+    process: true
+  - name: 24683
+    process: true
+  - name: 24684
+    process: true
+  - name: 24685
+    process: true
+  - name: 24687
+    process: true
+  - name: 24688
+    process: true
+  - name: 24726
+    process: true
+  - name: 24731
+    process: true
+  - name: 24732
+    process: true
+  - name: 24733
+    process: true
+  - name: 24734
+    process: true
+  - name: 24735
+    process: true
+  - name: 24736
+    process: true
+  - name: 24739
+    process: true
+  - name: 24740
+    process: true
+  - name: 24750
+    process: true
+  - name: 24751
+    process: true
+  - name: 24752
+    process: true
+  - name: 24753
+    process: true
+  - name: 24754
+    process: true
+  - name: 24755
+    process: true
+  - name: 24756
+    process: true
+  - name: 24758
+    process: true
+  - name: 24759
+    process: true
+  - name: 24772
+    process: true
+  - name: 24773
+    process: true
+  - name: 24774
+    process: true
+  - name: 24775
+    process: true
+  - name: 24783
+    process: true
+  - name: 24785
+    process: true
+  - name: 24789
+    process: true
+  - name: 24792
+    process: true
+  - name: 24793
+    process: true
+  - name: 24795
+    process: true
+  - name: 24796
+    process: true
+  - name: 24797
+    process: true
+  - name: 25372
+    process: true
+  - name: 25374
+    process: true
+  - name: 25376
+    process: true
+  - name: 25378
+    process: true
+  - name: 25380
+    process: true
+  - name: 25382
+    process: true
+  - name: 25387
+    process: true
+  - name: 25391
+    process: true
+  - name: 25392
+    process: true
+  - name: 25403
+    process: true
+  - name: 25406
+    process: true
+  - name: 25408
+    process: true
+  - name: 25410
+    process: true
+  - name: 25414
+    process: true
+  - name: 25416
+    process: true
+  - name: 25418
+    process: true
+  - name: 25420
+    process: true
+  - name: 25422
+    process: true
+  - name: 25424
+    process: true
+  - name: 25426
+    process: true
+  - name: 25428
+    process: true
+  - name: 25430
+    process: true
+  - name: 25432
+    process: true
+  - name: 25434
+    process: true
+  - name: 25435
+    process: true
+  - name: 25436
+    process: true
+  - name: 25438
+    process: true
+  - name: 25485
+    process: true
+  - name: 25488
+    process: true
+  - name: 25490
+    process: true
+  - name: 25492
+    process: true
+  - name: 25503
+    process: true
+  - name: 25553
+    process: true
+  - name: 25564
+    process: true
+  - name: 25565
+    process: true
+  - name: 25566
+    process: true
+  - name: 25567
+    process: true
+  - name: 25569
+    process: true
+  - name: 25570
+    process: true
+  - name: 25571
+    process: true
+  - name: 25572
+    process: true
+  - name: 25573
+    process: true
+  - name: 25575
+    process: true
+  - name: 25576
+    process: true
+  - name: 25578
+    process: true
+  - name: 25579
+    process: true
+  - name: 25580
+    process: true
+  - name: 25581
+    process: true
+  - name: 25583
+    process: true
+  - name: 25584
+    process: true
+  - name: 25585
+    process: true
+  - name: 25587
+    process: true
+  - name: 25588
+    process: true
+  - name: 25590
+    process: true
+  - name: 25591
+    process: true
+  - name: 25592
+    process: true
+  - name: 25593
+    process: true
+  - name: 25594
+    process: true
+  - name: 25598
+    process: true
+  - name: 25599
+    process: true
+  - name: 25605
+    process: true
+  - name: 25638
+    process: true
+  - name: 25639
+    process: true
+  - name: 25641
+    process: true
+  - name: 25642
+    process: true
+  - name: 25643
+    process: true
+  - name: 25663
+    process: true
+  - name: 25664
+    process: true
+  - name: 25665
+    process: true
+  - name: 25667
+    process: true
+  - name: 25674
+    process: true
+  - name: 25675
+    process: true
+  - name: 25676
+    process: true
+  - name: 25677
+    process: true
+  - name: 25678
+    process: true
+  - name: 25679
+    process: true
+  - name: 25680
+    process: true
+  - name: 25681
+    process: true
+  - name: 25683
+    process: true
+  - name: 25686
+    process: true
+  - name: 25688
+    process: true
+  - name: 25689
+    process: true
+  - name: 25690
+    process: true
+  - name: 25692
+    process: true
+  - name: 25694
+    process: true
+  - name: 25695
+    process: true
+  - name: 25700
+    process: true
+  - name: 25704
+    process: true
+  - name: 25707
+    process: true
+  - name: 25708
+    process: true
+  - name: 25724
+    process: true
+  - name: 25725
+    process: true
+  - name: 25726
+    process: true
+  - name: 25732
+    process: true
+  - name: 25738
+    process: true
+  - name: 25739
+    process: true
+  - name: 25740
+    process: true
+  - name: 25741
+    process: true
+  - name: 25742
+    process: true
+  - name: 25847
+    process: true
+  - name: 25848
+    process: true
+  - name: 25849
+    process: true
+  - name: 25852
+    process: true
+  - name: 25853
+    process: true
+  - name: 25854
+    process: true
+  - name: 25855
+    process: true
+  - name: 25856
+    process: true
+  - name: 25857
+    process: true
+  - name: 25858
+    process: true
+  - name: 25859
+    process: true
+  - name: 25862
+    process: true
+  - name: 25885
+    process: true
+  - name: 25890
+    process: true
+  - name: 25891
+    process: true
+  - name: 25892
+    process: true
+  - name: 25903
+    process: true
+  - name: 25904
+    process: true
+  - name: 25908
+    process: true
+  - name: 25909
+    process: true
+  - name: 25911
+    process: true
+  - name: 25912
+    process: true
+  - name: 25913
+    process: true
+  - name: 25914
+    process: true
+  - name: 25915
+    process: true
+  - name: 25918
+    process: true
+  - name: 25923
+    process: true
+  - name: 25925
+    process: true
+  - name: 25929
+    process: true
+  - name: 25931
+    process: true
+  - name: 25935
+    process: true
+  - name: 25937
+    process: true
+  - name: 25938
+    process: true
+  - name: 25939
+    process: true
+  - name: 25943
+    process: true
+  - name: 25944
+    process: true
+  - name: 25945
+    process: true
+  - name: 25949
+    process: true
+  - name: 25955
+    process: true
+  - name: 25962
+    process: true
+  - name: 25965
+    process: true
+  - name: 25966
+    process: true
+  - name: 25967
+    process: true
+  - name: 25968
+    process: true
+  - name: 25983
+    process: true
+  - name: 25984
+    process: true
+  - name: 25985
+    process: true
+  - name: 25986
+    process: true
+  - name: 25987
+    process: true
+  - name: 25988
+    process: true
+  - name: 25989
+    process: true
+  - name: 25990
+    process: true
+  - name: 25991
+    process: true
+  - name: 25992
+    process: true
+  - name: 25993
+    process: true
+  - name: 25994
+    process: true
+  - name: 25997
+    process: true
+  - name: 26002
+    process: true
+  - name: 26006
+    process: true
+  - name: 26007
+    process: true
+  - name: 26008
+    process: true
+  - name: 26009
+    process: true
+  - name: 26058
+    process: true
+  - name: 26060
+    process: true
+  - name: 26061
+    process: true
+  - name: 26071
+    process: true
+  - name: 26081
+    process: true
+  - name: 26092
+    process: true
+  - name: 26107
+    process: true
+  - name: 26110
+    process: true
+  - name: 26115
+    process: true
+  - name: 26118
+    process: true
+  - name: 26124
+    process: true
+  - name: 26126
+    process: true
+  - name: 26128
+    process: true
+  - name: 26133
+    process: true
+  - name: 26135
+    process: true
+  - name: 26138
+    process: true
+  - name: 26140
+    process: true
+  - name: 26159
+    process: true
+  - name: 26166
+    process: true
+  - name: 26174
+    process: true
+  - name: 26181
+    process: true
+  - name: 26202
+    process: true
+  - name: 26203
+    process: true
+  - name: 26204
+    process: true
+  - name: 26205
+    process: true
+  - name: 26207
+    process: true
+  - name: 26216
+    process: true
+  - name: 26224
+    process: true
+  - name: 26232
+    process: true
+  - name: 26239
+    process: true
+  - name: 26247
+    process: true
+  - name: 26271
+    process: true
+  - name: 26521
+    process: true
+  - name: 26531
+    process: true
+  - name: 26542
+    process: true
+  - name: 26544
+    process: true
+  - name: 26545
+    process: true
+  - name: 26562
+    process: true
+  - name: 26563
+    process: true
+  - name: 26564
+    process: true
+  - name: 26569
+    process: true
+  - name: 26572
+    process: true
+  - name: 26574
+    process: true
+  - name: 26575
+    process: true
+  - name: 26576
+    process: true
+  - name: 26577
+    process: true
+  - name: 26578
+    process: true
+  - name: 26579
+    process: true
+  - name: 26580
+    process: true
+  - name: 26588
+    process: true
+  - name: 26592
+    process: true
+  - name: 26595
+    process: true
+  - name: 26596
+    process: true
+  - name: 26598
+    process: true
+  - name: 26600
+    process: true
+  - name: 26601
+    process: true
+  - name: 26607
+    process: true
+  - name: 26608
+    process: true
+  - name: 26611
+    process: true
+  - name: 26612
+    process: true
+  - name: 26622
+    process: true
+  - name: 26623
+    process: true
+  - name: 26625
+    process: true
+  - name: 26626
+    process: true
+  - name: 26640
+    process: true
+  - name: 26641
+    process: true
+  - name: 26642
+    process: true
+  - name: 26643
+    process: true
+  - name: 26644
+    process: true
+  - name: 26662
+    process: true
+  - name: 26663
+    process: true
+  - name: 26664
+    process: true
+  - name: 26666
+    process: true
+  - name: 26668
+    process: true
+  - name: 26669
+    process: true
+  - name: 26670
+    process: true
+  - name: 26671
+    process: true
+  - name: 26672
+    process: true
+  - name: 26673
+    process: true
+  - name: 26674
+    process: true
+  - name: 26675
+    process: true
+  - name: 26677
+    process: true
+  - name: 26678
+    process: true
+  - name: 26679
+    process: true
+  - name: 26680
+    process: true
+  - name: 26681
+    process: true
+  - name: 26682
+    process: true
+  - name: 26683
+    process: true
+  - name: 26684
+    process: true
+  - name: 26685
+    process: true
+  - name: 26688
+    process: true
+  - name: 26695
+    process: true
+  - name: 26702
+    process: true
+  - name: 26703
+    process: true
+  - name: 26705
+    process: true
+  - name: 26724
+    process: true
+  - name: 26730
+    process: true
+  - name: 26739
+    process: true
+  - name: 26744
+    process: true
+  - name: 26745
+    process: true
+  - name: 26748
+    process: true
+  - name: 26752
+    process: true
+  - name: 26753
+    process: true
+  - name: 26765
+    process: true
+  - name: 26767
+    process: true
+  - name: 26768
+    process: true
+  - name: 26771
+    process: true
+  - name: 26772
+    process: true
+  - name: 26785
+    process: true
+  - name: 26786
+    process: true
+  - name: 26794
+    process: true
+  - name: 26795
+    process: true
+process: true
