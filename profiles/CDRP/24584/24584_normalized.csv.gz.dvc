@@ -1,0 +1,4 @@
+outs:
+- md5: 2593cb3edefc4ffeaa27e7fb5e60debb
+  size: 4886293
+  path: 24584_normalized.csv.gz

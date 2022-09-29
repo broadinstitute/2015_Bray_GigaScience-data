@@ -1,0 +1,4 @@
+outs:
+- md5: da7ba8227d5d288f30e865a40f725bf5
+  size: 4900069
+  path: 24685_normalized_negcon.csv.gz
