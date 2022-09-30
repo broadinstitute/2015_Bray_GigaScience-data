@@ -7,3 +7,6 @@ Install the conda environment in `create_metadata/environment.yml` and run the n
 
 ### Fix well names
 Use the same conda enviroment as above and run `fix_well_position.py` to change the well names from `a01` to `A01` in the aggregated profiles. Run the recipe only after fixing the names of the wells.
+
+### Notes
+`quality_control` step was not run because the `load_data.csv.gz` files did not have the column `Metadata_Row`. This column could be created and the `quality_control` step can be run later.
