@@ -1,0 +1,4 @@
+outs:
+- md5: 430d8f6a34c0448604266baa4384be97
+  size: 5651663
+  path: 26002_augmented.csv.gz
